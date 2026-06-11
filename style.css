@@ -7,11 +7,12 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#fff;
+background:#fff8f0;
 color:#222;
 overflow-x:hidden;
 }
 
+/* NAVBAR */
 .navbar{
 position:fixed;
 top:0;
@@ -20,8 +21,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 8%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
+background:rgba(255,245,230,.95);
+backdrop-filter:blur(12px);
 z-index:1000;
 box-shadow:0 2px 20px rgba(0,0,0,.08);
 }
@@ -32,13 +33,14 @@ align-items:center;
 gap:10px;
 font-weight:bold;
 font-size:22px;
-color:#d62828;
+color:#d62828; /* CHANDAMAMA RED */
 }
 
 .logo img{
 height:50px;
 }
 
+/* MENU */
 .navbar ul{
 display:flex;
 gap:25px;
@@ -56,6 +58,7 @@ transition:.3s;
 color:#d62828;
 }
 
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -67,21 +70,18 @@ background:linear-gradient(
 135deg,
 #d62828,
 #fcbf49,
-#ffffff
+#fff8f0
 );
 position:relative;
 overflow:hidden;
 }
 
-.hero-content{
-max-width:900px;
-z-index:2;
-}
-
+/* HERO TEXT */
 .hero h1{
 font-size:4rem;
-color:white;
-margin-bottom:10px;
+color:#d62828; /* RED FIX */
+text-shadow:0 5px 20px rgba(0,0,0,.2);
+animation:fadeInDown 1.2s ease;
 }
 
 .hero h2{
@@ -96,6 +96,7 @@ color:white;
 margin-bottom:30px;
 }
 
+/* BUTTONS */
 .btn{
 display:inline-block;
 padding:14px 28px;
@@ -105,10 +106,11 @@ border-radius:50px;
 text-decoration:none;
 margin:10px;
 transition:.3s;
+box-shadow:0 10px 25px rgba(214,40,40,.3);
 }
 
 .btn:hover{
-transform:translateY(-4px);
+transform:translateY(-6px);
 }
 
 .btn2{
@@ -116,17 +118,19 @@ background:#fff;
 color:#d62828;
 }
 
+/* FLOATING PREMIUM ANIMATION */
 .floating-circle{
 position:absolute;
 border-radius:50%;
 opacity:.25;
-animation:float 8s infinite ease-in-out;
+animation:float 10s infinite ease-in-out;
+filter:blur(1px);
 }
 
 .c1{
-width:220px;
-height:220px;
-background:white;
+width:240px;
+height:240px;
+background:#ffb703;
 left:10%;
 top:15%;
 }
@@ -134,31 +138,40 @@ top:15%;
 .c2{
 width:180px;
 height:180px;
-background:#ffefba;
+background:#d62828;
 right:10%;
 bottom:15%;
 }
 
 .c3{
-width:120px;
-height:120px;
+width:140px;
+height:140px;
 background:#fff;
 right:30%;
 top:20%;
 }
 
+/* NEW FLOAT EFFECT */
 @keyframes float{
-50%{
-transform:translateY(-40px);
-}
+0%{transform:translateY(0) scale(1);}
+50%{transform:translateY(-60px) scale(1.05);}
+100%{transform:translateY(0) scale(1);}
 }
 
+/* TEXT ANIMATION */
+@keyframes fadeInDown{
+from{opacity:0;transform:translateY(-30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* SECTIONS */
 .about,
 .collection,
 .social,
 .contact{
 padding:100px 8%;
 text-align:center;
+background:#fff8f0;
 }
 
 .about h2,
@@ -170,10 +183,10 @@ margin-bottom:25px;
 color:#d62828;
 }
 
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 margin-top:40px;
 }
@@ -187,7 +200,7 @@ transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-12px) scale(1.02);
 }
 
 .card img{
@@ -196,10 +209,7 @@ height:280px;
 object-fit:cover;
 }
 
-.card h3{
-padding:15px;
-}
-
+/* SOCIAL */
 .social-icons{
 display:flex;
 justify-content:center;
@@ -217,6 +227,7 @@ transition:.3s;
 transform:scale(1.2);
 }
 
+/* FOOTER */
 footer{
 background:#d62828;
 color:white;
@@ -224,6 +235,7 @@ text-align:center;
 padding:25px;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 right:20px;
@@ -241,16 +253,11 @@ text-decoration:none;
 z-index:999;
 }
 
+/* MOBILE */
 @media(max-width:768px){
 
 .navbar{
 flex-direction:column;
-}
-
-.navbar ul{
-flex-wrap:wrap;
-justify-content:center;
-margin-top:10px;
 }
 
 .hero h1{
@@ -260,5 +267,4 @@ font-size:2.5rem;
 .hero h2{
 font-size:1.3rem;
 }
-
 }
