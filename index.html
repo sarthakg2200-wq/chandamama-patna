@@ -6,80 +6,43 @@
 <title>Chandamama Collection</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-body{margin:0;font-family:Arial;background:#fffaf3;}
-
-nav{
-display:flex;justify-content:space-between;align-items:center;
-padding:10px 20px;background:#fff3d6;position:sticky;top:0;
-}
-
-nav img{height:50px;}
-
-nav ul{display:flex;list-style:none;gap:15px;}
-nav ul li a{text-decoration:none;color:#333;font-weight:bold;}
-
-.hero{
-text-align:center;padding:50px 20px;
-background:linear-gradient(#fff3d6,#fffaf3);
-}
-
-.hero h1{color:#8b5e3c;}
-
-.btn{
-display:inline-block;padding:10px 15px;
-background:#8b5e3c;color:white;
-margin:10px;border-radius:8px;text-decoration:none;
-}
-
-.grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;padding:20px;
-}
-
-.card{
-background:white;border-radius:10px;
-overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{transform:scale(1.05);}
-
-.card img{width:100%;height:200px;object-fit:cover;}
-
-.card h3{text-align:center;padding:10px;}
-
-footer{text-align:center;padding:20px;background:#fff3d6;}
-
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:green;color:white;
-padding:15px;border-radius:50%;
-font-size:22px;
-}
-</style>
-
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-<nav>
-<img src="assets/images/logo.jpg">
-<ul>
-<li><a href="#collection">Collection</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<nav class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo.jpg">
+        <span>Chandamama Collection</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<section class="hero">
-<h1>Chandamama Collection</h1>
-<p>India's Trusted Fashion Destination</p>
-<a href="#collection" class="btn">Explore</a>
+<section id="home" class="hero">
+
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+
+  <div>
+    <h1>Chandamama Collection</h1>
+    <p>India's Trusted Fashion Destination</p>
+    <a class="btn" href="#collection">Explore Collection</a>
+  </div>
+
 </section>
 
-<section id="collection" class="grid">
+<section id="collection" class="collection">
+
+<div class="grid">
 
 <div class="card"><img src="assets/images/saree1.jpg"><h3>Saree</h3></div>
 <div class="card"><img src="assets/images/lehenga.jpg"><h3>Lehenga</h3></div>
@@ -89,21 +52,19 @@ font-size:22px;
 <div class="card"><img src="assets/images/handbag1.jpg"><h3>Hand Bag</h3></div>
 <div class="card"><img src="assets/images/kidswear1.jpg"><h3>Kids Wear</h3></div>
 <div class="card"><img src="assets/images/toy1.jpg"><h3>Toys</h3></div>
-<div class="card"><img src="assets/images/babywear1.jpg"><h3>Baby Wear</h3></div>
+<div class="card"><img src="assets/images/babywear1.jpg"><h3>Baby</h3></div>
 <div class="card"><img src="assets/images/menwear1.jpg"><h3>Men Wear</h3></div>
 <div class="card"><img src="assets/images/shirvani1.jpg"><h3>Sherwani</h3></div>
 <div class="card"><img src="assets/images/coatpant1.jpg"><h3>Coat Pant</h3></div>
 <div class="card"><img src="assets/images/blazer1.jpg"><h3>Blazer</h3></div>
+
+</div>
 
 </section>
 
 <a href="https://wa.me/919430050964" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
-
-<footer>
-© Chandamama Collection
-</footer>
 
 </body>
 </html>
